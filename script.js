@@ -18,7 +18,7 @@ const getOffsetTop = () => {
   var ddd = dod / ddod * numImg;
   ddd = parseInt(ddd, 10);
 
-  idm = "url(img/d" + (23 - ddd) + ".png)";
+  idm = "url(img/d" + (numImg - ddd) + ".png)";
   offsetTop.innerHTML = idm;
   bodyd.style.backgroundImage = (idm);
 }
