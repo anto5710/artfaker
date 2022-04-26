@@ -1,5 +1,5 @@
 const scrollOffset = 100;
-const numImg = 6;
+const numImg = 23;
 
 const windowHeight = document.getElementById("window-height");
 const offsetTop = document.getElementById("offset-top");
@@ -18,7 +18,7 @@ const getOffsetTop = () => {
   var ddd = dod / ddod * numImg;
   ddd = parseInt(ddd, 10);
 
-  idm = "url(img/" + (ddd + 1) + ".png)";
+  idm = "url(img/d" + (ddd + 1) + ".png)";
   offsetTop.innerHTML = idm;
   bodyd.style.backgroundImage = (idm);
 }
