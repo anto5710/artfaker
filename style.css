@@ -111,7 +111,7 @@ body {
   overflow-x: hidden;
   perspective: 0.5px;
   transform-style: preserve-3d;
-  transform: translateZ(-0.05px);
+  transform: translateZ(-0.01px);
 }
 
 .scroll-offset {
