@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --offset-height: 100px;
+}
+
+body {
+  margin: 0;
+
+}
+
+#instructions {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 50%;
+  max-width: 600px;
+  height: fit-content;
+  margin: auto;
+
+  text-align: center;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  transition: opacity 500ms;
+}
+
+#instructions.hidden {
+  opacity: 0;
+}
+
+.vh-container {
+  position: relative;
+
+  opacity: 0;
+}
+
+.vh-line {
+  height: 97vh;
+  top: 0.5vh;
+  width: 2px;
+  margin-left: 5px;
+
+  opacity: 0;
+  position: fixed;
+  background-color: black;
+}
+
+.vh-line:before {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 1px;
+
+  opacity: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+}
+
+.vh-line:after {
+  position: fixed;
+  content: "";
+  bottom: 0;
+  left: 1px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+
+  border-top: 15px solid black;
+}
+
+.vh-display {
+  position: fixed;
+  height: max-content;
+  top: 50%;
+  bottom: 50%;
+  transform-origin: left;
+  left: 25px;
+  margin: auto;
+
+  transform: rotateZ(-90deg) translateX(-50%);
+}
+
+.transition {
+  transition: background-image 2s ease;
+  -webkit-transition: background-image 2s ease;
+}
+
+.transition:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 255, 0.3), rgba(0, 0, 255, 0.3));
+}
+
+body {
+  background-size: cover;
+  background-position: center center;
+  background-image: url("img/1.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.scroll-offset {
+  text-align: right;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  height: var(--offset-height);
+  /* border-top: 1px dashed red; */
+}
+
+.element-container {
+  margin-top: 97vh;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  background-color: transparent;
+}
+
+.element-container p {
+  margin: 0;
+  background-color: transparent;
+
+}
+
+.js-scroll {
+  width: 50%;
+  height: 300px;
+  min-width: 300px;
+  color: rgba(255,255,255, 0);
+  /* background-color: #dadada; */
+  transition: background-color 500ms;
+}
+
+.js-scroll.scrolled {
+  background-color:transparent;
+}
